@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+<canvas id="canvas" width="200" height="100"></canvas>
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var datos = [
+  [1, 20],
+  [2, 30],
+  [3, 40],
+];
+
+var chart = new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: ["Mes 1", "Mes 2", "Mes 3"],
+    datasets: [
+      {
+        data: datos,
+        backgroundColor: ["#ff0000", "#00ff00", "#0000ff"],
+      },
+    ],
+  },
+});
+</script>
+</body>
+</html>
